@@ -65,9 +65,10 @@ When adding new runtime assets (e.g., a real CV PDF), drop them in `backend/asse
 
 | Task | File |
 | --- | --- |
-| Edit hero description, name | `frontend/src/config/site.ts` |
+| Edit hero description, name, location | `frontend/src/config/site.ts` |
 | Add/edit rotating titles under the name | `frontend/src/config/titles.ts` |
-| Add/edit/reorder skill badges in About | `frontend/src/config/skills.ts` |
+| Add/edit/reorder experience cards | `frontend/src/config/experience.ts` |
+| Add/edit/reorder skill cards | `frontend/src/config/skills.ts` |
 | Replace profile photo | `frontend/public/profile.jpg` (path configured in `site.profileImage`) |
 | Add a new social link | `frontend/src/config/site.ts` + `frontend/src/components/Hero.tsx` |
 | Add a new section (e.g., Projects) | Add entry to `site.sections`, create `frontend/src/components/Projects.tsx`, mount in `App.tsx` |

@@ -20,7 +20,8 @@ A single-page application with smooth-scroll sections, built as a small monorepo
 
 ## Page sections
 
-- **About** — bio, profile photo, and a grid of skill badges.
+- **About** — bio, profile photo, full name, and location.
+- **Skills** — a responsive grid of six category cards (Frontend, Backend, Databases, Cloud/DevOps, Tools, Testing/Quality), each listing badge chips for the relevant skills.
 - **Experience** — a carousel of professional experiences (current role first). Each card shows the role, company, date range with computed duration, key responsibilities, and the tools used. Navigate with the side arrows, pagination dots, or the keyboard arrow keys when the carousel has focus.
 
 ## Editing content
@@ -29,9 +30,9 @@ Site content is centralized under `frontend/src/config/`:
 
 | What | File |
 | --- | --- |
-| Name, bio, social links, sections | `site.ts` |
+| Name, bio, location, social links, sections | `site.ts` |
 | Rotating titles under the name | `titles.ts` |
-| Skill badges (About section) | `skills.ts` |
+| Skill cards | `skills.ts` |
 | Experience cards | `experience.ts` |
 
 Replace the CV at `backend/assets/cv.pdf` and the profile photo at `frontend/public/profile.jpg`.
