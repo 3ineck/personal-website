@@ -1,4 +1,4 @@
-# Eineck.dev
+# eineck.dev
 
 Personal portfolio website of **Raphael Thiago Eineck**, Software Developer.
 

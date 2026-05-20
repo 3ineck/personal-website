@@ -1,7 +1,7 @@
 import type { SiteConfig } from '../types/site';
 
 export const site: SiteConfig = {
-  name: 'Eineck.dev',
+  name: 'eineck.dev',
   author: 'Raphael Thiago Eineck',
   description:
     'Software Developer focused on building clean, reliable, and user-friendly applications. I enjoy solving real problems with code and shipping products that make a difference.',
@@ -16,5 +16,6 @@ export const site: SiteConfig = {
     { id: 'about', label: 'About' },
     { id: 'skills', label: 'Skills' },
     { id: 'experience', label: 'Experience' },
+    { id: 'projects', label: 'Projects' },
   ],
 };
