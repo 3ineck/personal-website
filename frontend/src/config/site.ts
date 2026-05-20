@@ -7,6 +7,7 @@ export const site: SiteConfig = {
     'Software Developer focused on building clean, reliable, and user-friendly applications. I enjoy solving real problems with code and shipping products that make a difference.',
   location: 'Itajaí, Brazil',
   profileImage: '/profile.jpg',
+  email: 'raphael.rte@proton.me',
   links: {
     linkedin: 'https://www.linkedin.com/in/raphaelthiagoeineck',
     github: 'https://github.com/3ineck',
@@ -17,5 +18,6 @@ export const site: SiteConfig = {
     { id: 'skills', label: 'Skills' },
     { id: 'experience', label: 'Experience' },
     { id: 'projects', label: 'Projects' },
+    { id: 'contact', label: 'Contact' },
   ],
 };

@@ -9,6 +9,7 @@ export type SiteConfig = {
   description: string;
   location: string;
   profileImage: string;
+  email: string;
   links: {
     linkedin: string;
     github: string;
