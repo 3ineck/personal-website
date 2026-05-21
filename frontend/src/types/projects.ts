@@ -1,4 +1,8 @@
-export type ProjectStatus = 'active' | 'delivered' | 'in-production';
+export type ProjectStatus =
+  | 'active'
+  | 'delivered'
+  | 'in-production'
+  | 'maintaining';
 
 export type Project = {
   id: string;

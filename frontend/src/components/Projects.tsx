@@ -7,6 +7,15 @@ type StatusStyle = {
   label: string;
   bar: string;
   tag: string;
+  hoverBorder: string;
+  hoverIcon: string;
+};
+
+const STATUS_ORDER: Record<ProjectStatus, number> = {
+  'in-production': 0,
+  maintaining: 1,
+  active: 2,
+  delivered: 3,
 };
 
 const STATUS_STYLES: Record<ProjectStatus, StatusStyle> = {
@@ -14,20 +23,39 @@ const STATUS_STYLES: Record<ProjectStatus, StatusStyle> = {
     label: 'Active',
     bar: 'bg-emerald-500',
     tag: 'border-emerald-500/40 bg-emerald-500/10 text-emerald-300',
+    hoverBorder: 'hover:border-emerald-500/60',
+    hoverIcon: 'hover:text-emerald-400',
   },
   'in-production': {
     label: 'In Production',
     bar: 'bg-sky-500',
     tag: 'border-sky-500/40 bg-sky-500/10 text-sky-300',
+    hoverBorder: 'hover:border-sky-500/60',
+    hoverIcon: 'hover:text-sky-400',
   },
   delivered: {
     label: 'Delivered',
     bar: 'bg-violet-500',
     tag: 'border-violet-500/40 bg-violet-500/10 text-violet-300',
+    hoverBorder: 'hover:border-violet-500/60',
+    hoverIcon: 'hover:text-violet-400',
+  },
+  maintaining: {
+    label: 'Maintaining',
+    bar: 'bg-amber-500',
+    tag: 'border-amber-500/40 bg-amber-500/10 text-amber-300',
+    hoverBorder: 'hover:border-amber-500/60',
+    hoverIcon: 'hover:text-amber-400',
   },
 };
 
 export function Projects() {
+  const sortedProjects = [...projects].sort((a, b) => {
+    const byStatus = STATUS_ORDER[a.status] - STATUS_ORDER[b.status];
+    if (byStatus !== 0) return byStatus;
+    return b.date.localeCompare(a.date);
+  });
+
   return (
     <Section id="projects" title="Projects">
       <p className="max-w-3xl">
@@ -35,12 +63,12 @@ export function Projects() {
       </p>
 
       <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-6">
-        {projects.map((project) => {
+        {sortedProjects.map((project) => {
           const style = STATUS_STYLES[project.status];
           return (
             <article
               key={project.id}
-              className="group relative flex flex-col overflow-hidden rounded-2xl border border-zinc-800 bg-surface/40 transition-colors hover:border-accent/60"
+              className={`group relative flex flex-col overflow-hidden rounded-2xl border border-zinc-800 bg-surface/40 transition-colors ${style.hoverBorder}`}
             >
               <div className={`h-1.5 w-full ${style.bar}`} aria-hidden />
 
@@ -57,7 +85,7 @@ export function Projects() {
                       target="_blank"
                       rel="noreferrer"
                       aria-label={`Open ${project.title} on GitHub`}
-                      className="text-muted transition-colors hover:text-accent"
+                      className={`text-muted transition-colors ${style.hoverIcon}`}
                     >
                       <Github className="h-5 w-5" />
                     </a>

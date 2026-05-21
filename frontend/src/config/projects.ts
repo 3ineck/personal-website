@@ -2,6 +2,16 @@ import type { Project } from '../types/projects';
 
 export const projects: readonly Project[] = [
   {
+    id: 'whatsmynote',
+    title: 'WhatsMyNote',
+    description:
+      "A CLI that turns photos of highlighted book passages into Obsidian markdown notes. Reads the image through the OpenAI API or a local LLM via LM Studio, then writes the extracted highlights straight to your vault.",
+    date: '2026',
+    technologies: ['JavaScript', 'Node.js', 'OpenAI API', 'LM Studio'],
+    status: 'active',
+    github: 'https://github.com/3ineck/whatsmynote',
+  },
+  {
     id: 'eineck-dev',
     title: 'eineck.dev',
     description:
@@ -19,23 +29,49 @@ export const projects: readonly Project[] = [
     github: 'https://github.com/3ineck/personal-website',
   },
   {
-    id: 'sample-delivered',
-    title: 'Sample Delivered Project',
+    id: 'local-market',
+    title: 'Local Market Platform',
     description:
-      'Short description of a project that has been completed and handed off. Replace with one of your own.',
-    date: '2024',
-    technologies: ['Node.js', 'PostgreSQL'],
-    status: 'delivered',
-    github: 'https://github.com/3ineck',
+      'E-commerce storefront and back-office management system being built for a small local market. Covers the online storefront, product catalog, inventory, sales, and administrative tooling. Details are kept general due to client confidentiality.',
+    date: '2026',
+    technologies: [],
+    status: 'in-production',
   },
   {
-    id: 'sample-in-production',
-    title: 'Sample Production Project',
+    id: 'flamerino',
+    title: 'Flamerino',
     description:
-      'Short description of a project currently running in production. Replace with one of your own.',
-    date: '2025',
-    technologies: ['Next.js', 'TypeScript', 'MongoDB'],
-    status: 'in-production',
-    github: 'https://github.com/3ineck',
+      'A Discord bot built for the Nocturnal Flame community in Final Fantasy XIV. Features daily reminders with interactive buttons, configurable slash commands, a birthday system, and FFXIV utilities such as retainer price lookups (Universalis API) and hunt timers.',
+    date: '2023',
+    technologies: [
+      'JavaScript',
+      'Node.js',
+      'Discord.js',
+      'MongoDB',
+      'Mongoose',
+      'Universalis API',
+      'Heroku',
+    ],
+    status: 'delivered',
+    github: 'https://github.com/3ineck/flamerino',
+  },
+  {
+    id: 'ez-cert',
+    title: 'EZ CERT',
+    description:
+      'Sales and partner management platform built for EZ CERT, a digital certificate company. Handles 2,000+ orders, automates billing and partner commissioning, integrates PIX and boleto payments, auto-fills client data via CNPJ/CEP APIs, and ships notifications by email and Discord. Source is closed by the company; live at ezcert.com.br.',
+    date: '2026',
+    technologies: [
+      'JavaScript',
+      'Node.js',
+      'Express',
+      'Bootstrap',
+      'PostgreSQL',
+      'Discord.js',
+      'Docker',
+      'CI/CD',
+    ],
+    status: 'maintaining',
+    github: 'https://github.com/3ineck/ez-cert',
   },
 ];
