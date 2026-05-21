@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import {
   ArrowUpRight,
   Check,
@@ -6,9 +6,12 @@ import {
   Github,
   Linkedin,
   Mail,
+  Send,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { Section } from './Section';
+import { Button } from './ui/Button';
+import { ContactForm } from './ContactForm';
 import { site } from '../config/site';
 
 type LinkChannel = {
@@ -69,6 +72,8 @@ const cardClass =
 
 export function Contact() {
   const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const triggerRef = useRef<HTMLButtonElement>(null);
 
   const handleCopy = async (id: string, text: string) => {
     try {
@@ -173,6 +178,27 @@ export function Contact() {
           );
         })}
       </div>
+
+      <div className="mt-10 flex flex-col items-center gap-3 text-center">
+        <p className="text-sm text-muted">
+          Prefer to send a message right here?
+        </p>
+        <Button
+          ref={triggerRef}
+          type="button"
+          variant="primary"
+          onClick={() => setIsFormOpen(true)}
+        >
+          <Send size={18} />
+          Send a message
+        </Button>
+      </div>
+
+      <ContactForm
+        open={isFormOpen}
+        onClose={() => setIsFormOpen(false)}
+        triggerRef={triggerRef}
+      />
     </Section>
   );
 }
