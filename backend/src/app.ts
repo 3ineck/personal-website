@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { env } from './config/env.js';
 import { healthRouter } from './routes/health.routes.js';
 import { cvRouter } from './routes/cv.routes.js';
+import { contactRouter } from './routes/contact.routes.js';
 import { errorHandler } from './middleware/errorHandler.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -21,6 +22,7 @@ export function createApp() {
 
   app.use('/api/health', healthRouter);
   app.use('/api/cv', cvRouter);
+  app.use('/api/contact', contactRouter);
 
   if (env.isProduction) {
     const frontendDist = path.resolve(__dirname, '../../frontend/dist');
