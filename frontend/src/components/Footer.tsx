@@ -32,12 +32,12 @@ export function Footer() {
             </p>
           </button>
 
-          <ul className="flex flex-wrap gap-6 md:justify-center">
+          <ul className="flex flex-wrap gap-6 md:flex-nowrap md:justify-center md:gap-4 lg:gap-6">
             {site.sections.map((s) => (
               <li key={s.id}>
                 <button
                   onClick={() => scrollTo(s.id)}
-                  className="text-sm font-medium text-muted transition-colors hover:text-foreground focus-visible:outline-none focus-visible:text-foreground"
+                  className="whitespace-nowrap text-sm font-medium text-muted transition-colors hover:text-foreground focus-visible:outline-none focus-visible:text-foreground"
                 >
                   {s.label}
                 </button>
@@ -55,11 +55,10 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-center justify-between gap-2 border-t border-zinc-900/80 pt-6 text-sm text-muted md:flex-row">
+        <div className="mt-10 flex flex-col items-center justify-center gap-2 border-t border-zinc-900/80 pt-6 text-sm text-muted">
           <p>
             © {year} {site.author}. All rights reserved.
           </p>
-          <p>Built with React, Vite, Tailwind &amp; Framer Motion.</p>
         </div>
       </motion.div>
     </footer>

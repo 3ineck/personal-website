@@ -4,7 +4,7 @@ export const site: SiteConfig = {
   name: 'eineck.dev',
   author: 'Raphael Thiago Eineck',
   description:
-    'Software Developer focused on building clean, reliable, and user-friendly applications. I enjoy solving real problems with code and shipping products that make a difference.',
+    'Web developer driven by curiosity and a passion for technology. Backed by 10+ years bridging business and IT. Proactive, adaptable, and always learning.',
   location: 'Itajaí, Brazil',
   profileImage: '/profile.jpg',
   email: 'raphael.rte@proton.me',

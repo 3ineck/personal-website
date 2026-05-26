@@ -30,17 +30,22 @@ export function About() {
           </div>
         </div>
 
-        <div className="max-w-3xl space-y-4">
+        <div className="mx-auto max-w-3xl space-y-4 self-center text-justify">
           <p>
-            I'm a Software Developer who enjoys turning complex problems into
-            simple, elegant solutions. My work focuses on building reliable
-            applications with a strong emphasis on developer experience,
-            clean architecture, and thoughtful UX.
+            I'm a web developer driven by curiosity and a passion for
+            technology, always exploring new tools and languages. I hold
+            degrees in Systems Analysis and Development and in Business
+            Administration, with over 10 years of experience in people
+            management and technical support — a background that gives me a
+            solid grasp of both business needs and the technology that serves
+            them.
           </p>
           <p>
-            I care about writing code that's easy to maintain, evolve, and
-            reason about. When I'm not coding, I'm usually exploring new
-            tools and ideas that can make me a better engineer.
+            Since 2023, I've focused on web development, working primarily
+            with JavaScript, Node.js, and PostgreSQL, and delivering
+            freelance projects with RESTful APIs, Python, and React. I value
+            problem-solving, proactivity, and learning fast — qualities that
+            help me adapt quickly to new contexts and IT demands.
           </p>
         </div>
       </div>
