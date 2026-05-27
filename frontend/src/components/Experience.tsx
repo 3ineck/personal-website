@@ -114,7 +114,7 @@ export function Experience() {
             <ChevronLeft className="h-5 w-5" />
           </button>
 
-          <div className="relative h-[38rem] flex-1 overflow-hidden rounded-2xl border border-zinc-800 bg-surface/40 sm:h-[32rem] md:h-[30rem]">
+          <div className="relative min-h-[26rem] flex-1 overflow-hidden rounded-2xl border border-zinc-800 bg-surface/40 md:min-h-[30rem]">
             <AnimatePresence custom={direction} mode="wait" initial={false}>
               <motion.article
                 key={index}
@@ -124,7 +124,17 @@ export function Experience() {
                 animate="center"
                 exit="exit"
                 transition={{ duration: 0.3, ease: 'easeOut' }}
-                className="flex h-full flex-col gap-5 p-6 md:p-8"
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={0.2}
+                onDragEnd={(_, info) => {
+                  const swipe = info.offset.x;
+                  const velocity = info.velocity.x;
+                  const threshold = 60;
+                  if (swipe < -threshold || velocity < -500) go(1);
+                  else if (swipe > threshold || velocity > 500) go(-1);
+                }}
+                className="flex h-full flex-col gap-5 p-6 touch-pan-y select-none md:p-8 cursor-grab active:cursor-grabbing"
                 aria-label={`${entry.role} at ${entry.company}`}
               >
                 <header className="space-y-1">

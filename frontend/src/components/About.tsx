@@ -33,19 +33,20 @@ export function About() {
         <div className="mx-auto max-w-3xl space-y-4 self-center text-justify">
           <p>
             I'm a web developer driven by curiosity and a passion for
-            technology, always exploring new tools and languages. I hold
-            degrees in Systems Analysis and Development and in Business
-            Administration, with over 10 years of experience in people
-            management and technical support — a background that gives me a
-            solid grasp of both business needs and the technology that serves
-            them.
+            technology, constantly exploring emerging tools, frameworks, and
+            programming languages. I hold degrees in Systems Analysis and
+            Development and Business Administration, and I bring over 10
+            years of experience in people management and technical support.
+            This background provides me with a solid understanding of both
+            business operations and the technologies that support them.
           </p>
           <p>
-            Since 2023, I've focused on web development, working primarily
-            with JavaScript, Node.js, and PostgreSQL, and delivering
-            freelance projects with RESTful APIs, Python, and React. I value
-            problem-solving, proactivity, and learning fast — qualities that
-            help me adapt quickly to new contexts and IT demands.
+            Since 2023, I have been fully focused on web development,
+            working with both well-established technologies and modern,
+            cutting-edge solutions. I am committed to problem-solving,
+            proactive in my approach, and quick to learn. These qualities
+            enable me to adapt efficiently to new environments and evolving
+            IT challenges.
           </p>
         </div>
       </div>
